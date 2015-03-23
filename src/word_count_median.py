@@ -22,7 +22,7 @@ def median(lst):
     else:
         return (sortedlst[index] + sortedlst[index + 1])/2.0
 
-folderpath = './wc_input/*.txt'
+folderpath = 'C:/Python34/wc_input/*.txt'
 counter = Counter()
 files = iglob(folderpath)
 for filepath in files:
@@ -36,14 +36,14 @@ for word, count in sortedbyword:
     if len(word) > max_len:
         max_len = len(word)
 
-with open('./wc_output/wc_result.txt', 'w') as file:
+with open('C:/Python34/wc_output/wc_result.txt', 'w') as file:
 
     for word, count in sortedbyword:
         file.write(str(word).ljust(max_len + 10) + str(count)+'\n')
 
 myList = []
 files = iglob(folderpath)
-with open('./wc_output/med_result.txt', 'w') as medfile:
+with open('C:/Python34/wc_output/med_result.txt', 'w') as medfile:
     num_lines = 0
     for file in files:
         with open(file, "r") as f:
